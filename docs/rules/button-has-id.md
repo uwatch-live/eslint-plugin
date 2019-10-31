@@ -1,36 +1,30 @@
 # Enforce all buttons to have id (button-has-id)
 
-Please describe the origin of the rule here.
-
+This rules enforces an explicit `id` attribute for all the `button` elements.
+Ids can be used in analytics utils like GA or Facebook pixel
 
 ## Rule Details
 
-This rule aims to...
+The following patterns are considered errors:
 
-Examples of **incorrect** code for this rule:
+```jsx
+var Hello = <button>Hello</button>
 
-```js
-
-// fill me in
-
+var Hello = React.createElement('button', {}, 'Hello')
 ```
 
-Examples of **correct** code for this rule:
+The following patterns are **not** considered errors:
 
-```js
+```jsx
+var Hello = <span>Hello</span>
+var Hello = <span id="foo">Hello</span>
+var Hello = <button id="foo">Hello</button>
 
-// fill me in
-
+var Hello = React.createElement('span', {}, 'Hello')
+var Hello = React.createElement('span', {id: 'foo'}, 'Hello')
+var Hello = React.createElement('button', {id: 'bar'}, 'Hello')
 ```
-
-### Options
-
-If there are any options, describe them here. Otherwise, delete this section.
 
 ## When Not To Use It
 
-Give a short description of when it would be appropriate to turn off this rule.
-
-## Further Reading
-
-If there are other links that describe the issue this rule addresses, please include them here in a bulleted list.
+When application is not serving end-users(ex. dashboard)
