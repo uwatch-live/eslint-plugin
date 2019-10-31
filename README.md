@@ -1,22 +1,20 @@
 # eslint-plugin-uwatch
 
-Uwatch set of eslint rules
+uWatch set of eslint rules
 
 ## Installation
 
 You'll first need to install [ESLint](http://eslint.org):
 
 ```
-$ npm i eslint --save-dev
+$ yarn add -D eslint
 ```
 
 Next, install `eslint-plugin-uwatch`:
 
 ```
-$ npm install eslint-plugin-uwatch --save-dev
+$ yarn add -D eslint-plugin-uwatch
 ```
-
-**Note:** If you installed ESLint globally (using the `-g` flag) then you must also install `eslint-plugin-uwatch` globally.
 
 ## Usage
 
@@ -25,7 +23,7 @@ Add `uwatch` to the plugins section of your `.eslintrc` configuration file. You 
 ```json
 {
     "plugins": [
-        "uwatch"
+        "@uwatch"
     ]
 }
 ```
@@ -36,7 +34,7 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
     "rules": {
-        "uwatch/rule-name": 2
+        "@uwatch/rule-name": 2
     }
 }
 ```
