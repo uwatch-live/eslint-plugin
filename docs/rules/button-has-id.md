@@ -8,21 +8,21 @@ Ids can be used in analytics utils like GA or Facebook pixel
 The following patterns are considered errors:
 
 ```jsx
-var Hello = <button>Hello</button>
+<button>Hello</button>
 
-var Hello = React.createElement('button', {}, 'Hello')
+React.createElement('button', {}, 'Hello')
 ```
 
 The following patterns are **not** considered errors:
 
 ```jsx
-var Hello = <span>Hello</span>
-var Hello = <span id="foo">Hello</span>
-var Hello = <button id="foo">Hello</button>
+<span>Hello</span>
+<span id="foo">Hello</span>
+<button id="foo">Hello</button>
 
-var Hello = React.createElement('span', {}, 'Hello')
-var Hello = React.createElement('span', {id: 'foo'}, 'Hello')
-var Hello = React.createElement('button', {id: 'bar'}, 'Hello')
+React.createElement('span', {}, 'Hello')
+React.createElement('span', {id: 'foo'}, 'Hello')
+React.createElement('button', {id: 'bar'}, 'Hello')
 ```
 
 ## When Not To Use It
