@@ -1,6 +1,6 @@
 {
   "name": "@uwatch/eslint-plugin",
-  "version": "0.9.2",
+  "version": "1.0.0",
   "description": "uWatch set of eslint rules",
   "keywords": [
     "eslint",
