@@ -41,7 +41,7 @@ Then configure the rules you want to use under the rules section.
 
 ## Supported Rules
 
-* Fill in provided rules here
+* [@uwatch/button-has-id](docs/rules/button-has-id.md): Enforces `button` to have `id` attribute
 
 
 
