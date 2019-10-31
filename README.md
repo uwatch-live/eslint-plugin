@@ -10,10 +10,10 @@ You'll first need to install [ESLint](http://eslint.org):
 $ yarn add -D eslint
 ```
 
-Next, install `eslint-plugin-uwatch`:
+Next, install `@uwatch/eslint-plugin`:
 
 ```
-$ yarn add -D eslint-plugin-uwatch
+$ yarn add -D @uwatch/eslint-plugin
 ```
 
 ## Usage
@@ -28,14 +28,13 @@ Add `uwatch` to the plugins section of your `.eslintrc` configuration file. You 
 }
 ```
 
-
-Then configure the rules you want to use under the rules section.
+Then add `recommended` to your config list
 
 ```json
 {
-    "rules": {
-        "@uwatch/rule-name": 2
-    }
+    "extends": [
+      "plugin:@uwatch/recommended"
+    ]
 }
 ```
 
