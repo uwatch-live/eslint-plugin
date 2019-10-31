@@ -8,6 +8,7 @@
     "eslint-plugin"
   ],
   "author": "Bohdan Didyk <b.didyk@uwatch.live>",
+  "repository": "https://github.com/uwatch-live/eslint-plugin.git",
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha tests --recursive"
